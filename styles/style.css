@@ -1,7 +1,3 @@
-:root {
-    --dark-grey: #464646;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -9,17 +5,7 @@
     text-transform: uppercase;
 }
 
-*:lang(ar) {
-    font-family: "Cairo", sans-serif;
-    font-weight: 800;
-    text-align: right;
-}
-
 body {
-    font-size: 1rem;
-    letter-spacing: -1px;
-    font-family: "IBM Plex Sans", sans-serif;
-
     width: 100%;
     max-width: 100vw;
 }
@@ -38,15 +24,6 @@ ul {
     list-style: none;
     display: flex;
     align-items: center;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 /* || HEADER */
@@ -84,7 +61,7 @@ nav {
     }
 }
 
-.links {
+.link-column {
     display: inline-flex;
     flex-direction: column;
 }
@@ -101,35 +78,6 @@ li:has(.button-language) {
     li:has(.button-venues),
     li:has(.button-language) {
         display: flex;
-    }
-}
-
-.nav-buttons li button {
-    background-color: white;
-    border: none;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 800;
-    font-size: 1rem;
-    letter-spacing: -1px;
-
-    &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-}
-
-.nav-buttons li .button-tickets {
-    display: none;
-    background-color: yellow;
-    border: 1px solid black;
-    padding: 1rem;
-    transition: all .2s;
-
-    &:hover,
-    &:focus {
-        text-decoration: unset;
-        background-color: black;
-        color: white;
     }
 }
 
@@ -183,12 +131,12 @@ button {
 .filter-list {
     padding: 0 1rem;
     max-width: 100vw;
+    justify-content: left;
+
+    /* Hide scrollbar */
     overflow: scroll;
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
-        justify-content: left;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     li {
         min-height: 2rem;
@@ -199,9 +147,9 @@ button {
     display: block;
     height: 100%;
     min-width: 9rem;
-    background-color: var(--dark-grey);
+    background-color: var(--accent-color-grey);
     color: white;
-    border: 1px solid var(--dark-grey);
+    border: 1px solid var(--accent-color-grey);
     padding: 1rem;
     text-align: center;
     font-weight: 400;
@@ -209,7 +157,7 @@ button {
     &:hover,
     &:focus {
         background-color: white;
-        color: var(--dark-grey);
+        color: var(--accent-color-grey);
         outline: none;
         text-decoration: unset;
     }

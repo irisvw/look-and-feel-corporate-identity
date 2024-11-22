@@ -14,14 +14,15 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://warrenak.github.io/look-and-feel-styleguide/qatarmuseums.css">
+    <!-- <link rel="stylesheet" href="https://warrenak.github.io/look-and-feel-styleguide/qatarmuseums.css"> -->
+     <link rel="stylesheet" href="styles/qatarmuseums.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <header>
-        <a href="#main" class="skip visually-hidden">Skip to main content</a>
-        <a href="#" aria-label="home">
+        <a href="#main" class="skip visually-hidden link">Skip to main content</a>
+        <a href="#" class="link" aria-label="home">
             <!-- QATAR MUSEUMS LOGO: SOURCE https://qm.org.qa/en/ -->
             <svg height="60" viewBox="0 0 627 150" width="227" x="0" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
@@ -57,25 +58,25 @@
             <ul class="nav-links">
                 <!-- The arabic version of each link is hidden for a screen reader. Implemented JavaScript to switch the hidden to the english spans upon changing language. -->
                 <li>
-                    <a href="#" class="links">
+                    <a href="#" class="link link-column">
                         <span lang="ar" dir="rtl" aria-hidden="true">قــصــصــنــا</span>
                         <span lang="en">Stories</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="links">
+                    <a href="#" class="link link-column">
                         <span lang="ar" dir="rtl" aria-hidden="true">الـفـعــالــيــات</span>
                         <span lang="en">What's On</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="links">
+                    <a href="#" class="link link-column">
                         <span lang="ar" dir="rtl" aria-hidden="true">المقتنيات</span>
                         <span lang="en">Collection</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="links">
+                    <a href="#" class="link link-column">
                         <span lang="ar" dir="rtl" aria-hidden="true">زيـــارة</span>
                         <span lang="en">Visit</span>
                     </a>
@@ -85,10 +86,10 @@
             <!-- Buttons -->
             <ul class="nav-buttons">
                 <li>
-                    <button class="button button-tickets">Tickets</button>
+                    <button class="button button-primary">Tickets</button>
                 </li>
                 <li>
-                    <button class="button button-members">
+                    <button class="button button-clean button-members">
                         <svg width="25" height="25" viewBox="0 0 512 512" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -104,7 +105,7 @@
                     </button>
                 </li>
                 <li>
-                    <button class="button button-venues">
+                    <button class="button button-clean button-venues">
                         <svg width="25" height="25" viewBox="-10 -10 50 50" xml:space="preserve"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -115,10 +116,10 @@
                     </button>
                 </li>
                 <li>
-                    <button class="button button-language">Language</button>
+                    <button class="button button-clean button-language">Language</button>
                 </li>
                 <li>
-                    <button class="menu">
+                    <button class="button button-clean menu">
                         <svg height="25" shape-rendering="crispEdges" viewBox="0 0 30 30" width="25"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 11.5h16v2H7z"></path>
