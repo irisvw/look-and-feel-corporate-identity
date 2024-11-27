@@ -16,7 +16,7 @@ main {
 
 img {
     width: 100%;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     transition: all 0.1s;
 }
 
@@ -26,11 +26,15 @@ ul {
     align-items: center;
 }
 
+h1 {
+    padding: 1rem;
+}
+
 /* || HEADER */
 header {
     display: flex;
     align-items: center;
-    padding: .5rem;
+    padding: 0.5rem;
     justify-content: space-between;
     border-bottom: 1px solid black;
     width: 100%;
@@ -44,11 +48,6 @@ header {
 nav {
     display: inline-flex;
     align-items: center;
-    font-weight: 800;
-
-    ul {
-        gap: 1rem;
-    }
 }
 
 .nav-links {
@@ -58,12 +57,17 @@ nav {
 @media screen and (min-width: 1200px) {
     .nav-links {
         display: flex;
+        gap: 1em;
     }
 }
 
 .link-column {
     display: inline-flex;
     flex-direction: column;
+}
+
+li:has(.button-tickets) {
+    margin: .5em;
 }
 
 li:has(.button-members),
@@ -73,7 +77,6 @@ li:has(.button-language) {
 }
 
 @media screen and (min-width: 800px) {
-
     li:has(.button-members),
     li:has(.button-venues),
     li:has(.button-language) {
@@ -113,7 +116,7 @@ button {
 .gallery {
     display: block;
     column-width: clamp(10rem, 20rem, 15vw);
-    gap: .75rem;
+    gap: 0.75rem;
 }
 
 /* || FILTERS & SEARCH BAR */
@@ -126,12 +129,14 @@ button {
     flex-direction: column;
     max-width: 100%;
     gap: 1rem;
+    font-weight: var(--font-weight-normal);
 }
 
 .filter-list {
     padding: 0 1rem;
     max-width: 100vw;
     justify-content: left;
+    gap: 1rem;
 
     /* Hide scrollbar */
     overflow: scroll;
@@ -144,15 +149,10 @@ button {
 }
 
 .filter {
-    display: block;
-    height: 100%;
     min-width: 9rem;
     background-color: var(--accent-color-grey);
     color: white;
     border: 1px solid var(--accent-color-grey);
-    padding: 1rem;
-    text-align: center;
-    font-weight: 400;
 
     &:hover,
     &:focus {
@@ -163,7 +163,7 @@ button {
     }
 }
 
-form {
+.search-form {
     background-color: white;
     border: 1px solid black;
 
@@ -181,7 +181,7 @@ form {
         max-width: 100%;
         border: none;
         border-bottom: 1px solid black;
-        margin: .5rem 0 7px .5rem;
+        margin: 0.5rem 0 7px 0.5rem;
     }
 
     input[type=search]:focus {
@@ -193,7 +193,7 @@ form {
     button {
         background-color: white;
         border: none;
-        padding: .5rem;
+        padding: 0.5rem;
     }
 }
 
@@ -221,4 +221,110 @@ form {
     position: absolute;
     width: auto;
     background-color: white;
+}
+
+.form {
+    width: min(90vw, 1000px);
+    padding: 1rem;
+}
+
+label {
+    display: grid;
+    cursor: inherit;
+    margin: 1rem 0;
+    position: relative;
+}
+
+label:has(input:not([type=radio])),
+label:has(select) {
+    margin: 3rem 0;
+}
+
+.centered-inline-container {
+    /* Positioning */
+    display: inline-flex;
+    align-items: center;
+
+    /* Cursor */
+    cursor: pointer;
+}
+
+.centered-block-container {
+    /* Positioning */
+    display: flex;
+    align-items: center;
+    
+    /* Cursor */
+    cursor: pointer;
+}
+
+.form-main {
+    display: grid;
+}
+
+input[type=radio] {
+    appearance: none;
+    height: 1.25em;
+    width: 1.25em;
+    margin: 0 .5em 0 0;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1.25em;
+}
+
+input[type=radio]:checked {
+    background-color: black;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+option,
+select {
+    font-size: 1.2rem;
+    padding: 0.5em;
+    text-transform: none;
+    font-family: var(--primary-font);
+    color: var(--accent-color-grey);
+    
+    appearance: none;
+    border: 1px solid black;
+    width: 20rem;
+}
+
+input[type=date],
+input[type=time] {
+    font-size: 1.2rem;
+    padding: 0.5em;
+    width: 10em;
+}
+
+label:has(input:invalid) input,
+label:has(input:invalid) span{
+    border-color: red;
+    color: red;
+}
+
+label span {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    top: -1em;
+    left: 1em;
+    padding: 0.2em;
+}
+
+/* label:has(input[type=date]),
+label:has(input[type=time]) {
+    margin-top: 2rem;
+} */
+
+fieldset {
+    appearance: none;
+    border: none;
+    margin: 1rem 0;
+}
+
+label:has(input[type=text]):nth-of-type(1) {
+    margin-top: 3rem;
 }
