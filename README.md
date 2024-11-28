@@ -43,7 +43,7 @@ Ik heb speciale aandacht besteed om de input elementen zo dicht mogelijk bij het
 ### Links
 - ![image](https://github.com/user-attachments/assets/813cfa1d-4cbe-44c8-9af7-5e24e122e60b)
 - Ik heb aparte classes gedefinieerd voor links die normaal geen `text-decoration` hebben maar wel bij een hover, en de links die normaal onderstreept zijn (om te communiceren dat het een link is) maar geen `text-decoration` op een hover.
-- 
+
 ## Bronnen
 
 ## Licentie
