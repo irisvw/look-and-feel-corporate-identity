@@ -1,7 +1,7 @@
 # Corporate Identity
 
 Ik heb deze sprint verder gewerkt aan de pagina voor Qatar Museums (https://github.com/fdnd-agency/fabrique/tree/design-challenge). We hebben een styleguide gemaakt op basis van de huisstijl van Qatar Museums.
-We hebben de eigenschappen geanalyzeerd om die vervolgens consistent toe te passen.
+We hebben de eigenschappen geanalyzeerd om die vervolgens consistent toe te passen. Ik heb een nieuw ontwerp gemaakt voor een tickets pagina, en deze uitgewerkt, om zoveel mogelijk van de huisstijl weer te geven.
 
 - Styleguide (repository) https://github.com/warrenAk/look-and-feel-styleguide
 - Styleguide (live) https://warrenak.github.io/look-and-feel-styleguide/
